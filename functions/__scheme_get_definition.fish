@@ -65,6 +65,7 @@ function __scheme_get_definition \
   if [ -z $scheme_name ]
     echo 'default'
     echo 'dracula'
+    echo 'hyper'
     echo 'monokai'
     echo 'solarized'
     echo 'tomorrow'
@@ -111,6 +112,49 @@ function __scheme_get_definition \
       set -g scheme_color_cwd_root           $red
       set -g scheme_color_autosuggestion     $purple
       set -g scheme_color_user               $orange
+      set -g scheme_color_host               $foreground
+      # set -g scheme_color_cancel             --reverse
+      # set -g scheme_color_valid_path         --underline
+      # set -g scheme_color_match              --background=brblue
+      # set -g scheme_color_selection          white --bold --background=brblack
+      # set -g scheme_color_search_match       bryellow --background=brblack
+      # set -g scheme_pager_color_prefix       white --bold --underline
+      # set -g scheme_pager_color_completion   normal
+      # set -g scheme_pager_color_description  B3A06D
+      # set -g scheme_pager_color_progress     brwhite --background=cyan
+      # set -g scheme_pager_color_secondary
+      # set -g scheme_color_history_current    --bold
+
+    # https://hyper.is/
+    case 'hyper'
+      # Color palette
+      set -l background     000000
+      set -l red            fd6f6b
+      set -l green          67f86f
+      set -l yellow         fffa72
+      set -l blue           6a76fb
+      set -l magenta        fd7cfc
+      set -l cyan           68fdfe
+      set -l white          c7c7c7
+      set -l foreground     ffffff
+
+      # Preferred to reset all colors
+      __scheme_reset_to_default
+      # Color configurations
+      # set -g scheme_color_normal             normal
+      set -g scheme_color_command            $blue
+      set -g scheme_color_quote              $green
+      set -g scheme_color_redirection        $magenta
+      set -g scheme_color_end                $magenta
+      set -g scheme_color_error              $red
+      set -g scheme_color_param              $cyan
+      set -g scheme_color_comment            $white
+      set -g scheme_color_operator           $blue
+      set -g scheme_color_escape             $magenta
+      set -g scheme_color_cwd                $cyan
+      set -g scheme_color_cwd_root           $red
+      set -g scheme_color_autosuggestion     $white
+      set -g scheme_color_user               $green
       set -g scheme_color_host               $foreground
       # set -g scheme_color_cancel             --reverse
       # set -g scheme_color_valid_path         --underline
