@@ -129,13 +129,12 @@ function __scheme_get_definition \
     case 'hyper'
       # Color palette
       set -l background     000000
-      set -l red            fd6f6b
-      set -l green          67f86f
-      set -l yellow         fffa72
-      set -l blue           6a76fb
-      set -l magenta        fd7cfc
-      set -l cyan           68fdfe
-      set -l white          c7c7c7
+      set -l red            fe0100
+      set -l green          33ff00
+      set -l blue           0066ff
+      set -l magenta        cc00ff
+      set -l cyan           00ffff
+      set -l white          d0d0d0
       set -l foreground     ffffff
 
       # Preferred to reset all colors
